@@ -1,6 +1,18 @@
 const form = document.getElementById('form');
 const userQuery = document.getElementById('input-text');
 const outputDiv = document.getElementById('grid-container');
+
+function showError(message) {
+  const h2 = document.createElement('h2');
+  h2.innerHTML = message;
+  h2.className = 'errorEl';
+  const container = document.querySelector('.container');
+  container.appendChild(h2);
+  setTimeout(() => {
+    container.removeChild(h2);
+  }, 2000);
+}
+
 async function fetchGifData(e) {
   e.preventDefault();
   const query = userQuery.value;
@@ -18,11 +30,10 @@ function displayDataDOM(data) {
   console.log(data);
   let output = '';
   data.data
-    .map((image, i) => {
+    .map((image) => {
       output += `
       <div class="card">
       <img src="${image.images.downsized_large.url}" alt="">
-      <span class="desc">Hello</span>
         </div>
     `;
     })
