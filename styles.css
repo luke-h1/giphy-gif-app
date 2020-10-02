@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  background-color: #0d1321;
+  color: #ccc;
+  padding: 20px;
+}
+
+.header img {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 200px;
+}
+
+
+.header img:hover {
+  animation-name: swivel;
+  animation-duration: 1s;
+  cursor: pointer;
+}
+@keyframes swivel {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.container {
+  padding: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+.card {
+  width: 200px;
+  height: 350px;
+  background-color: #000;
+}
+
+.card img {
+  width: 200px;
+}
+
+.desc {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-control {
+  margin: 1em 0 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-text {
+  padding: 8px;
+  font-size: 20px;
+  outline: 0;
+  border: #333 1px solid;
+}
+
+.btn {
+  padding: 8px;
+  background-color: #353531;
+  color: #fff;
+}
+
+.btn:active {
+  transform: scale(0.91);
+}
+
+.btn:hover {
+  background-color: #746f72;
+}
