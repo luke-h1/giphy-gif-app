@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .header {
@@ -23,19 +23,16 @@ body {
   right: 200px;
 }
 
-
 .header img:hover {
   animation-name: swivel;
   animation-duration: 1s;
   cursor: pointer;
 }
 @keyframes swivel {
-
   to {
     transform: rotate(360deg);
   }
 }
-
 
 .container {
   padding: 30px;
@@ -55,6 +52,7 @@ body {
 
 .card img {
   width: 200px;
+  height: 350px;
 }
 
 .desc {
@@ -90,4 +88,20 @@ body {
 
 .btn:hover {
   background-color: #746f72;
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
